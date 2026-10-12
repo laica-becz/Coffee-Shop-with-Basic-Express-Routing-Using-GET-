@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    /* Changed from /photos/bg.jpg to bg.jpg */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #4e342e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ac895f;
+    padding: 15px 20px;
+}
+
+.name {
+    font-size: 24px; 
+    font-weight: bold;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px; /* Optional: gives the hover area a nice rounded background button look */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.menu a:hover {
+    background-color: #5d4037; /* Darker coffee brown highlight */
+    color: #fffdf9; /* Keeps text crisp white */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5d4037;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+}
+
+.dropdown li a:hover {
+    background-color: #795548;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.navicon {
+    display: none;
+    color: white;
+    font-size: 24px;
+}
+
+.hero {
+    background-color: rgba(255, 253, 249, 0.92);
+    border: 1px solid #d7ccc8;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 28.8px;
+    color: #4e342e;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #6d4c41;
+    font-weight: 600;
+}
+
+main {
+    flex: 1; /* Pushes the footer down so it never "flies" or floats in the middle */
+}
+
+.intro {
+    background-color: rgba(255, 253, 249, 0.95);
+    border: 1px solid #d7ccc8;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px 20px;
+    margin: 40px auto 20px auto; /* Adds space from the header */
+    max-width: 800px;
+}
+
+.intro h1 {
+    font-size: 28px;
+    color: #4e342e;
+    margin-bottom: 8px;
+}
+
+.intro h2 {
+    font-size: 18px;
+    color: #6d4c41;
+    font-weight: normal;
+    margin: 0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    justify-content: center;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d7ccc8;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    flex: 1 1 calc(25% - 15px);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px #ac895f;
+}
+
+.item img {
+    width: 100%;
+    height: 200px;       /* Forces every card image to be the exact same height */
+    object-fit: cover;   /* Ensures images fill the space cleanly without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 19.2px;
+    color: #4e342e;
+    margin: 5px 0;
+}
+
+.item p {
+    font-size: 14.4px; 
+    color: #6d4c41;
+    margin: 0;
+}
+
+/* Split Container layout for About and Contact pages */
+.split-container {
+    display: flex;
+    flex-wrap: nowrap; /* Keeps items side-by-side on desktop */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.split-image {
+    flex: 1;
+}
+
+.split-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.split-content {
+    flex: 1;
+    background-color: rgba(255, 253, 249, 0.95);
+    border: 1px solid #d7ccc8;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    color: #4e342e;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d7ccc8;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #4e342e;
+}
+
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #ac895f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: auto; /* Locks footer firmly to the bottom */
+}
+
+@media (min-width: 769px) {
+    .products .item {
+        flex: 1 1 calc(25% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .products .item {
+        flex: 1 1 calc(50% - 15px);
+    }.split-container {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 480px) {
+    .products .item {
+        flex: 1 1 100%;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #4e342e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+    .menu li a {
+        padding: 10px 15px;
+    }
+    .navicon {
+        display: block;
+    }
+}

@@ -1,0 +1,37 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: none; 
+    color: black;   
+    margin: 0;
+    padding: 0;
+}
+
+header,
+nav,
+footer,
+.navicon,
+.menu {
+    display: none;
+}
+
+.products {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    page-break-inside: avoid; 
+}
+
+h1, h2, h3 {
+    page-break-after: avoid;
+    margin: 0 0 5px;
+}
+
+* {
+    box-shadow: none;
+    text-shadow: none;
+}
